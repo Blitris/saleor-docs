@@ -1,0 +1,29 @@
+---
+id: order-line-update
+title: OrderLineUpdate
+---
+
+Updates an order line of an order.
+
+```graphql
+type OrderLineUpdate {
+  order: Order
+  orderErrors: [OrderError!]!
+  errors: [OrderError!]!
+  orderLine: OrderLine
+}
+```
+
+### Fields
+
+#### `order` ([`Order`](/developer/api-reference/objects/order.mdx))
+
+Related order.
+
+#### `orderErrors` ([`[OrderError!]!`](/developer/api-reference/objects/order-error.mdx))
+
+<sub><sup><span className="deprecatedTag">DEPRECATED</span> Use errors field instead. This field will be removed in Saleor 4.0.</sup></sub>
+
+#### `errors` ([`[OrderError!]!`](/developer/api-reference/objects/order-error.mdx))
+
+#### `orderLine` ([`OrderLine`](/developer/api-reference/objects/order-line.mdx))

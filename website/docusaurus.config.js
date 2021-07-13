@@ -19,10 +19,22 @@ module.exports = {
         schema: "http://localhost:8000/graphql/",
         rootPath: "../docs/",
         baseURL: "developer/api-reference",
-        homepage: "../docs/developer/api-reference/api-introduction.mdx",
+        homepage: "../docs/developer/api-reference.mdx",
+        homepageURL: "developer/api-reference",
       },
     ],
   ],
+
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve('esbuild-loader'),
+      options: {
+        loader: 'tsx',
+        format: isServer ? 'cjs' : undefined,
+        target: isServer ? 'node12' : 'es2017',
+      },
+    }),
+  },
 
   themeConfig: {
     algolia: {
@@ -152,7 +164,7 @@ module.exports = {
           path: "../docs",
           versions: {
             current: {
-              label: '3.0 (alpha)',
+              label: '3.0 (beta)',
               path: '3.0',
             },
           },

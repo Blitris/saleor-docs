@@ -10,7 +10,6 @@ type Checkout implements Node, ObjectWithMetadata {
   created: DateTime!
   lastChange: DateTime!
   user: User
-  quantity: Int!
   channel: Channel!
   billingAddress: Address
   shippingAddress: Address
@@ -27,12 +26,14 @@ type Checkout implements Node, ObjectWithMetadata {
   availablePaymentGateways: [PaymentGateway!]!
   email: String!
   isShippingRequired: Boolean!
+  quantity: Int!
   lines: [CheckoutLine]
   shippingPrice: TaxedMoney
   shippingMethod: ShippingMethod
   subtotalPrice: TaxedMoney
   token: UUID!
   totalPrice: TaxedMoney
+  languageCode: LanguageCodeEnum!
 }
 ```
 
@@ -43,8 +44,6 @@ type Checkout implements Node, ObjectWithMetadata {
 #### `lastChange` ([`DateTime!`](/developer/api-reference/scalars/date-time.mdx))
 
 #### `user` ([`User`](/developer/api-reference/objects/user.mdx))
-
-#### `quantity` ([`Int!`](/developer/api-reference/scalars/int.mdx))
 
 #### `channel` ([`Channel!`](/developer/api-reference/objects/channel.mdx))
 
@@ -94,6 +93,10 @@ Email of a customer.
 
 Returns True, if checkout requires shipping.
 
+#### `quantity` ([`Int!`](/developer/api-reference/scalars/int.mdx))
+
+The number of items purchased.
+
 #### `lines` ([`[CheckoutLine]`](/developer/api-reference/objects/checkout-line.mdx))
 
 A list of checkout lines, each containing information about an item in the checkout.
@@ -117,6 +120,10 @@ The checkout's token.
 #### `totalPrice` ([`TaxedMoney`](/developer/api-reference/objects/taxed-money.mdx))
 
 The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.
+
+#### `languageCode` ([`LanguageCodeEnum!`](/developer/api-reference/enums/language-code-enum.mdx))
+
+Checkout language code.
 
 ### Interfaces
 

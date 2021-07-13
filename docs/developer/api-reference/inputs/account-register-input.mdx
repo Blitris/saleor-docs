@@ -10,6 +10,9 @@ type AccountRegisterInput {
   email: String!
   password: String!
   redirectUrl: String
+  languageCode: LanguageCodeEnum
+  metadata: [MetadataInput!]
+  channel: String
 }
 ```
 
@@ -26,3 +29,15 @@ Password.
 #### `redirectUrl` ([`String`](/developer/api-reference/scalars/string.mdx))
 
 Base of frontend URL that will be needed to create confirmation URL.
+
+#### `languageCode` ([`LanguageCodeEnum`](/developer/api-reference/enums/language-code-enum.mdx))
+
+User language code.
+
+#### `metadata` ([`[MetadataInput!]`](/developer/api-reference/inputs/metadata-input.mdx))
+
+User public metadata.
+
+#### `channel` ([`String`](/developer/api-reference/scalars/string.mdx))
+
+Slug of a channel which will be used to notify users. Optional when only one channel exists.

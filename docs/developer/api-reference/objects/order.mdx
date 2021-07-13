@@ -11,7 +11,6 @@ type Order implements Node, ObjectWithMetadata {
   created: DateTime!
   status: OrderStatus!
   user: User
-  languageCode: String!
   trackingClientId: String!
   billingAddress: Address
   shippingAddress: Address
@@ -35,6 +34,8 @@ type Order implements Node, ObjectWithMetadata {
   availableShippingMethods: [ShippingMethod]
   invoices: [Invoice]
   number: String
+  original: ID
+  origin: OrderOriginEnum!
   isPaid: Boolean!
   paymentStatus: PaymentChargeStatusEnum!
   paymentStatusDisplay: String!
@@ -50,10 +51,13 @@ type Order implements Node, ObjectWithMetadata {
   totalBalance: Money!
   userEmail: String
   isShippingRequired: Boolean!
+  languageCode: String!
+  languageCodeEnum: LanguageCodeEnum!
   discount: Money
   discountName: String
   translatedDiscountName: String
   discounts: [OrderDiscount!]
+  errors: [OrderError!]!
 }
 ```
 
@@ -68,8 +72,6 @@ The ID of the object.
 #### `status` ([`OrderStatus!`](/developer/api-reference/enums/order-status.mdx))
 
 #### `user` ([`User`](/developer/api-reference/objects/user.mdx))
-
-#### `languageCode` ([`String!`](/developer/api-reference/scalars/string.mdx))
 
 #### `trackingClientId` ([`String!`](/developer/api-reference/scalars/string.mdx))
 
@@ -137,6 +139,14 @@ List of order invoices.
 
 User-friendly number of an order.
 
+#### `original` ([`ID`](/developer/api-reference/scalars/id.mdx))
+
+The ID of the order that was the base for this order.
+
+#### `origin` ([`OrderOriginEnum!`](/developer/api-reference/enums/order-origin-enum.mdx))
+
+The order origin.
+
 #### `isPaid` ([`Boolean!`](/developer/api-reference/scalars/boolean.mdx))
 
 Informs if an order is fully paid.
@@ -197,6 +207,14 @@ Email address of the customer.
 
 Returns True, if order requires shipping.
 
+#### `languageCode` ([`String!`](/developer/api-reference/scalars/string.mdx))
+
+<sub><sup><span className="deprecatedTag">DEPRECATED</span> Use the `languageCodeEnum` field to fetch the language code. This field will be removed in Saleor 4.0.</sup></sub>
+
+#### `languageCodeEnum` ([`LanguageCodeEnum!`](/developer/api-reference/enums/language-code-enum.mdx))
+
+Order language code.
+
 #### `discount` ([`Money`](/developer/api-reference/objects/money.mdx))
 
 <sub><sup><span className="deprecatedTag">DEPRECATED</span> Use discounts field. This field will be removed in Saleor 4.0.</sup></sub>
@@ -218,6 +236,10 @@ Translated discount name.
 #### `discounts` ([`[OrderDiscount!]`](/developer/api-reference/objects/order-discount.mdx))
 
 List of all discounts assigned to the order.
+
+#### `errors` ([`[OrderError!]!`](/developer/api-reference/objects/order-error.mdx))
+
+List of errors that occurred during order validation.
 
 ### Interfaces
 

@@ -175,7 +175,7 @@ Make sure that each product has a unique name so site users can find them easily
 :::tip Writing a good description
 Your product descriptions can be cool and fun, or just based on the facts. They represent the tone of your store. Be creative if you like, but be clear and make sure that you have all the information that a buyer needs.
 
-![Formatting product description](../screenshots/catalog-product-description.jpeg)
+![Formatting product description](../screenshots/catalog-product-description.png)
 :::
 
 #### Step 2: Define pricing
@@ -201,7 +201,7 @@ Click _Edit&nbsp;Website&nbsp;SEO_ to add a description. If you do not add uniqu
 Increase traffic to your store by adding SEO-friendly descriptions for search engines. Write interesting, short content about each product, using keywords that people will use in web searches. Create a unique description for each product so search engines do not think it is duplicated content.
 :::
 
-![Editing product SEO](../screenshots/catalog-product-seo.jpeg)
+![Editing product SEO](../screenshots/catalog-product-seo.png)
 
 #### Step 4: Organize your product
 
@@ -211,7 +211,9 @@ Categorize your new product using the drop-down menus to assign a relevant Produ
 
 Once you have set up all your product details, you need to assign a previously created [channel](dashboard/configuration/channels.md). Click the _MANAGE_ button in the top right corner of the availability card, and then assign a channel. You can assign as many channels as you need for each product.
 
-Each channel gives you fine control over the availability of individual items. You can set a product's publication date on a per-channel basis.
+Each channel gives you fine control over the availability of individual items. You can choose all or specific variants that will be assigned to a channel. Then you can set a product's publication date on a per-channel basis.
+
+![](../screenshots/catalog-product-variant-availability.png)
 
 :::note Assign a category
 
@@ -356,8 +358,6 @@ Click on a specific product from the variants list to edit the size, images, pri
 
 To add a new variant, click the _Add variant_ button in the _variants_ list. While creating a new variant, you need to fill in all information required and assign to a specific warehouse by clicking the _+_ button in the _Inventory_ section.
 
-![Editing product variants](../screenshots/catalog-product-variant-details.png)
-
 You can edit the cost and sale price of an item in the Pricing card.
 
 When you receive new stock, enter the amount in the _Quantity Available_ field in the _Inventory_ section to keep up to date and avoid false out-of-stock messages. Make sure to save your changes before exiting.
@@ -365,6 +365,10 @@ When you receive new stock, enter the amount in the _Quantity Available_ field i
 To track inventory, you need to enable the _Track Inventory_ checkbox.
 
 You can repeat this process for all sizes or types of the same product by clicking the Variants card on the left side. Each variant has a specific SKU code (Stock Keep Unit) which is unique to specific variants.
+
+Once the product availability is set on the main product page, you will also find information as to which channel a specific variant of a product is assigned to at the top of each variant page.
+
+![Editing product variants](../screenshots/catalog-product-variant-details.png)
 
 ### How to manage metadata in the variants page
 

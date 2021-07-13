@@ -60,4 +60,32 @@ If you prefer to work in dark mode, click on your account name in the top right 
 
 ### How to log out
 
-To log out, click your account name in the top right corner of the dashboard, and then click the _log out_ button. 
+To log out, click your account name in the top right corner of the dashboard, and then click the _log out_ button.
+
+### How to use the dashboard navigator
+
+Click the navigator button on top right corner of the dashboard or use the *CTRL* + *K* combination to open the dashboard navigator. Then type the location you would like to navigate to, for instance: products main page.
+
+![Dashboard navigator](screenshots/dashboard-home-navigator.png)
+
+You can type "?" to see all available navigation options.
+
+#### Available navigation options:
+- _..._ - Search Views and Actions
+- _>_ - Search Command
+- _#_ - Search Orders
+- _@_ - Search Customers
+- _$_ - Search in Catalog
+- _?_ - Display Help
+
+#### The examples of using the dashboard navigator
+
+1. You are looking for a specific order. Once the dashboard navigator is open, type *#* and then the number of the order. In the following example, the product order number is 2215. The dashboard navigator will show you the fulfillment status.
+
+You can open the order's detail page by clicking the order under the _Quick actions_ section.
+
+![Dashboard navigator](screenshots/dashboard-home-navigator-example.png)
+
+2. You are looking for a specific hoodie in your catalog. Once the dashboard navigator is open, type _$_ and then _hoodie_. The dashboard navigator will show you all options related to hoodies including products or categories.
+
+![Dashboard navigator](screenshots/dashboard-home-navigator-example-2.png)

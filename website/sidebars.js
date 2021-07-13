@@ -98,6 +98,7 @@ module.exports = {
       "developer/attributes",
       "developer/checkout",
       "developer/users",
+      "developer/permissions",
       "developer/metadata",
       {
         "type": "category",
@@ -114,8 +115,10 @@ module.exports = {
             "label": "Apps",
             "items": [
               "developer/extending/apps/key-concepts",
-              "developer/extending/apps/creating-and-installing-apps-from-the-command-line",
-              "developer/extending/apps/graphql-api",
+              "developer/extending/apps/manifest",
+              "developer/extending/apps/installing-apps",
+              "developer/extending/apps/asynchronous-webhooks",
+              "developer/extending/apps/synchronous-webhooks",
               "developer/extending/apps/sample-webhook-payloads"
             ]
           },
@@ -143,6 +146,8 @@ module.exports = {
           "developer/running-saleor/s3",
           "developer/running-saleor/gcs",
           "developer/running-saleor/emails",
+          "developer/running-saleor/debugging-emails",
+          "developer/running-saleor/exposing-instance",
           "developer/running-saleor/monitoring",
           "developer/running-saleor/background-tasks"
         ]
@@ -158,7 +163,7 @@ module.exports = {
       },
       {
         "type": "category",
-        "label": "Api Reference",
+        "label": "API reference",
         items: [
           ...require("../docs/developer/api-reference/sidebar-schema.js").schemaSidebar
         ]
